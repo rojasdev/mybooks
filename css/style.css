@@ -1,0 +1,341 @@
+body {
+    font: 600 14px/24px "Open Sans", 
+       "HelveticaNeue-Light", 
+       "Helvetica Neue Light", 
+       "Helvetica Neue", 
+       Helvetica, Arial, 
+       "Lucida Grande", 
+       Sans-Serif;
+ }
+ h1 {
+    color: #e8e9ec;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 1rem;
+    margin-bottom: 6px;
+ }
+ 
+ #header:before, #header:after {
+    content: "";
+    display: table;
+ }
+ #header:after {
+    clear: both;
+ }
+ 
+ #header {
+    background: #2db34a;
+    padding: 10px 0;
+ }
+ 
+ #header, footer, nav {
+    border-radius: 6px;
+ }
+
+ footer{
+    background: #a5ceac;
+    color: #fff;
+    margin: 1.858736059%;
+    padding: 20px 0;
+    text-align: center;
+ }
+
+/*Strip the ul of padding and list styling*/
+#header ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: relative;
+    float: right;
+}
+/*Create a horizontal list with spacing*/
+#header li {
+    /*display:inline-block;*/
+    float: left;
+    margin-right: 1px;
+}
+/*Style for menu links*/
+#header li a {
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: #2f3036;
+    text-decoration: none;
+}
+/*Hover state for top level links*/
+#header li:hover a {
+    background: #19c589;
+}
+/*Style for dropdown links*/
+#header li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+/*Hover state for dropdown links*/
+#header li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+/*Hide dropdown links until they are needed*/
+#header li ul {
+    display: none;
+}
+/*Make dropdown links vertical*/
+#header li ul li {
+    display: block;
+    float: none;
+}
+/*Prevent text wrapping*/
+#header li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+#header ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+/*Style 'show menu' label button and hide it by default*/
+#header .show-menu {
+    text-align: left;
+    padding: 2px 0;
+    display: none;
+}
+#header .show-menu img{
+    width: 20%;
+    height: 20%;
+}
+/*Hide checkbox*/
+#header input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+#header input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+    /*Make dropdown links appear inline*/
+    #header ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    #header li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    #header ul li, li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    #header .show-menu {
+        display:inline-block;
+    }
+}
+
+#main-contents{
+    background: #eaeaed;
+    margin: 1.258736059%;
+    min-height: 400px;
+}
+
+#page-title h1{
+    color: #161718;
+    padding: 1.2%;
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+}
+/** For Main **/
+/* breweries styles */
+.breweries {
+    padding: 0rem;
+  }
+  
+  .breweries > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    list-style-type: none;
+    padding: 1rem;
+  }
+  
+  .breweries > ul > li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+  }
+  
+  .breweries > ul > li > figure {
+    max-height: 220px;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+  }
+  
+  .breweries > ul > li > figure > img {
+    width: 100%;
+  }
+  
+  .breweries > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+  }
+  
+  .breweries > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .5rem;
+    font-size: 1.25rem;
+  }
+  .breweries > ul > li > figure > figcaption > h4 {
+    color: white;
+    padding: .5rem;
+    font-size: 1rem;
+  }
+  
+  .breweries > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+  }
+  
+  .breweries > ul > li > a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+  }
+
+/* LOGIN / LOGOUT *********************/
+  /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 760px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 60%; /* Could be more or less, depending on screen size */
+      }
+  }
